@@ -273,7 +273,7 @@ namespace jaytwo.FluentUnits.Tests
         public void FromFeet(double feet, double expectedMeters)
         {
             // arrange
-            
+
             // act
             var length = Length.FromFeet(feet);
 
@@ -342,7 +342,7 @@ namespace jaytwo.FluentUnits.Tests
         {
             // arrange
             var length = Length.FromMeters(2.2);
-            
+
             // assert
             Assert.Equal(1.1m, (length * 0.5m).Meters);
             Assert.Equal(1.1m, (length * 0.5d).Meters);
@@ -601,7 +601,7 @@ namespace jaytwo.FluentUnits.Tests
 
             // act
             var result = left.Equals(right);
-            
+
             // assert
             Assert.False(result);
         }
@@ -642,6 +642,63 @@ namespace jaytwo.FluentUnits.Tests
         {
             // assert
             Assert.Equal(0m, Length.Zero.Meters);
+        }
+
+
+        [Fact]
+        public void MultiplyBy()
+        {
+            // arrange
+            var length = Length.FromMeters(2.2);
+
+            // act & assert
+            Assert.Equal(1.1m, length.MultiplyBy(0.5m).Meters);
+            Assert.Equal(1.1m, length.MultiplyBy(0.5f).Meters);
+            Assert.Equal(1.1m, length.MultiplyBy(0.5d).Meters);
+            Assert.Equal(4.4m, length.MultiplyBy(2).Meters);
+            Assert.Equal(4.4m, length.MultiplyBy(2L).Meters);
+        }
+
+        [Fact]
+        public void DivideBy()
+        {
+            // arrange
+            var length = Length.FromMeters(2.2);
+
+            // act & assert
+            Assert.Equal(4.4m, length.DivideBy(0.5m).Meters);
+            Assert.Equal(4.4m, length.DivideBy(0.5f).Meters);
+            Assert.Equal(4.4m, length.DivideBy(0.5d).Meters);
+            Assert.Equal(1.1m, length.DivideBy(2).Meters);
+            Assert.Equal(1.1m, length.DivideBy(2L).Meters);
+        }
+
+        [Fact]
+        public void Add()
+        {
+            // arrange
+            var length = Length.FromMeters(2.2);
+            var lengthToAdd = Length.FromMeters(1.1);
+
+            // act
+            var result = length.Add(lengthToAdd);
+
+            // assert
+            Assert.Equal(3.3m, result.Meters);
+        }
+
+        [Fact]
+        public void Subtract()
+        {
+            // arrange
+            var length = Length.FromMeters(3.3);
+            var lengthToSubtract = Length.FromMeters(1.1);
+
+            // act
+            var result = length.Subtract(lengthToSubtract);
+
+            // assert
+            Assert.Equal(2.2m, result.Meters);
         }
     }
 }

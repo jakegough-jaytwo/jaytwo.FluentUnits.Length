@@ -4,15 +4,6 @@ namespace jaytwo.FluentUnits
 {
     public static class LengthExtensions
     {
-        public static Length MultiplyBy(this Length length, decimal value) => length * value;
-        public static Length MultiplyBy(this Length length, double value) => length * value;
-        public static Length MultiplyBy(this Length length, long value) => length * value;
-        public static Length DivideBy(this Length length, decimal value) => length / value;
-        public static Length DivideBy(this Length length, double value) => length / value;
-        public static Length DivideBy(this Length length, long value) => length / value;
-        public static Length Add(this Length length, Length lengthToAdd) => length + lengthToAdd;
-        public static Length Subtract(this Length length, Length lengthToSubtract) => length - lengthToSubtract;
-
         public static Length LengthMillimeters(this decimal value) => Length.FromMillimeters(value);
         public static Length LengthMillimeters(this double value) => Length.FromMillimeters(value);
         public static Length LengthMillimeters(this float value) => Length.FromMillimeters(value);

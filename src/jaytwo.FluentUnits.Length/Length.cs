@@ -18,8 +18,8 @@ namespace jaytwo.FluentUnits
 
         public decimal Millimeters => Meters / MetersPerMillimeter;
         public decimal Centimeters => Meters / MetersPerCentimeter;
-        public decimal Meters { get; }        
-        public decimal Kilometers=> Meters / MetersPerKilometer;
+        public decimal Meters { get; }
+        public decimal Kilometers => Meters / MetersPerKilometer;
         public decimal Inches => Meters / MetersPerInch;
         public decimal Feet => Meters / MetersPerFoot;
         public decimal Yards => Meters / MetersPerYard;
@@ -76,10 +76,16 @@ namespace jaytwo.FluentUnits
             return false;
         }
 
-        public int CompareTo(Length other)
-        {
-            return Meters.CompareTo(other.Meters);
-        }
+        public int CompareTo(Length other) => Meters.CompareTo(other.Meters);
+
+        public Length MultiplyBy(decimal value) => this * value;
+        public Length MultiplyBy(double value) => this * value;
+        public Length MultiplyBy(long value) => this * value;
+        public Length DivideBy(decimal value) => this / value;
+        public Length DivideBy(double value) => this / value;
+        public Length DivideBy(long value) => this / value;
+        public Length Add(Length lengthToAdd) => this + lengthToAdd;
+        public Length Subtract(Length lengthToSubtract) => this - lengthToSubtract;
 
         public bool Equals(Length other) => other.Meters == Meters;
         public static bool operator ==(Length a, Length b) => a.Equals(b);

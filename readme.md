@@ -16,7 +16,9 @@ TODO
 
 ## Source Data
 
-Values taken from [NIST Handbook 44](https://nvlpubs.nist.gov/nistpubs/hb/2019/NIST.HB.44-2019.pdf) (page C-8)
+From [NIST Handbook 44](https://nvlpubs.nist.gov/nistpubs/hb/2019/NIST.HB.44-2019.pdf)
+
+### Conversion Values
 
 [bracketed values are exact]
 
@@ -29,6 +31,22 @@ Values taken from [NIST Handbook 44](https://nvlpubs.nist.gov/nistpubs/hb/2019/N
 | 1 centimeter = | 0.3937008 | 0.03280840 | 0.01093613 | 0.000006213712 | [1]            | [0.01]     |
 | 1 meter =      | 39.37008  | 3.280840   | 1.093613   | 0.0006213712   | [100]          | [1]        |
 
+From NIST Handbook 44 page C-8.
+
+### Symbols
+
+| Unit       | Symbol |
+| ----       | ------ |
+| inch       | in     |
+| foot       | ft     |
+| yard       | yd     |
+| mile       | mi     |
+| millimeter | mm     |
+| centimeter | cm     |
+| meter      | m      |
+| kilometer  | km     |
+
+From NIST Handbook 44 page C-20.
 
 ---
 
