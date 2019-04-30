@@ -1,4 +1,5 @@
 ﻿using System;
+using jaytwo.WeightsAndMeasures;
 
 namespace jaytwo.FluentUnits
 {
