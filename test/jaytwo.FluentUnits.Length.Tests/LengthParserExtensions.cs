@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
@@ -35,7 +35,7 @@ namespace jaytwo.FluentUnits.Tests
         public void Parse_Length(string value, double expectedMeters)
         {
             // arrange
-            
+
             // act
             var length = value.Parse().Length();
 

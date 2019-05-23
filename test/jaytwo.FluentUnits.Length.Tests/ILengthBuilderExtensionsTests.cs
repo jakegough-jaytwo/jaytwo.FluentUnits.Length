@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
 namespace jaytwo.FluentUnits.Tests
 {
-    public class LengthBuilderExtensionsTests
+    public class ILengthBuilderExtensionsTests
     {
         [Fact]
         public void Inches()

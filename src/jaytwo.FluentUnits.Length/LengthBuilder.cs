@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 
 namespace jaytwo.FluentUnits
 {
     public class LengthBuilder : ILengthBuilder
     {
-        public decimal Value { get; }
-
         public LengthBuilder(decimal value)
         {
             Value = value;
@@ -20,5 +18,7 @@ namespace jaytwo.FluentUnits
             : this(Convert.ToDecimal(value))
         {
         }
+
+        public decimal Value { get; }
     }
 }
